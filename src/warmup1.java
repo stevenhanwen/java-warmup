@@ -1,6 +1,34 @@
 public class warmup1 {
 
-public String delDel(String str) {
+
+
+  // Given two int values, return their sum. 
+  // Unless the two values are the same, then return double their sum.
+
+  public static int sumDouble(int a, int b) {
+    if (a == b){
+      return 2 * (a + b); 
+    }
+    return a + b; 
+  }
+
+  
+  // We have two monkeys, a and b, and the parameters 
+  // aSmile and bSmile indicate if each is smiling. 
+  // We are in trouble if they are both smiling or 
+  // if neither of them is smiling. Return true if we are in trouble.
+  public static boolean monkeyTrouble(boolean aSmile, boolean bSmile) {
+  if (aSmile && bSmile) {
+    return true; 
+  } else if (!aSmile && !bSmile){
+    return true;
+  } 
+
+  return false; 
+}
+
+
+  public String delDel(String str) {
   
     if (str.length() >= 4 && str.substring (1, 4) == "del") {
       String front = str.substring (0,1); 
@@ -32,6 +60,7 @@ public String delDel(String str) {
     
   }
 
+  // this one uses StringBuilder to be more efficient
   public static String everyNthStringBuild(String str, int n) {
   
     StringBuilder newStr = new StringBuilder(""); 
