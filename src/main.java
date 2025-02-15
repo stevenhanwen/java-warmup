@@ -1,14 +1,7 @@
 public class main {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
 
-    
-        Methods.stringE("Hello"); 
-
-        Methods.stringE("e"); 
-
-        Methods.stringE("Heleleo"); 
-
-        Methods.stringE("ellle"); 
+        //warmup1.everyNth("happiness", 2); 
+        warmup1.everyNthStringBuild("happiness", 2);
     }
 }
