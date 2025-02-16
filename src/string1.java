@@ -29,5 +29,31 @@ public String makeTags(String tag, String word) {
   return "<" + tag + ">" + word + "</" + tag + ">"; 
 }
 
+// Given an "out" string length 4, such as "<<>>", and a word, 
+// return a new string where the word is in the middle of the out string, 
+// e.g. "<<word>>". Note: use str.substring(i, j) to extract the String starting at index i and 
+// going up to but not including index j.
+
+public static String makeOutWord(String out, String word) {
+  int lengthOfOut = out.length(); 
+  StringBuilder outWord = new StringBuilder(""); 
+
+  outWord.append(out.substring(0, lengthOfOut/2) + word + out.substring(lengthOfOut/2)); 
+
+  
+  System.out.println(outWord);
+  return outWord.toString(); 
+}
+
+// Given a string, return a new string made of 3 copies of the last 2 chars of the original string. 
+// The string length will be at least 2.
+
+public static String extraEnd(String str) { 
+  String lastTwo = str.substring(str.length() - 2); 
+  StringBuilder newString = new StringBuilder(""); 
+  newString.append(lastTwo + lastTwo + lastTwo); 
+
+  return newString.toString(); 
+}
 
 }
