@@ -1,4 +1,4 @@
-public class logic1 {
+public class logic_simple {
     
     // When squirrels get together for a party, they like to have cigars. 
     // A squirrel party is successful when the number of cigars is between 40 and 60, inclusive. 

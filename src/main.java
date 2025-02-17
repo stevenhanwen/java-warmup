@@ -3,7 +3,10 @@ public class main {
 
         //warmup1.everyNth("happiness", 2); 
         // warmup1.everyNthStringBuild("happiness", 2);
+        // string1.makeOutWord("<<>>", "word"); 
+        // string_medium.doubleChar("abc"); 
+        // string_medium.countHi("a"); 
 
-        string1.makeOutWord("<<>>", "word"); 
+        string_medium.catDog("ddd"); 
     }
 }
