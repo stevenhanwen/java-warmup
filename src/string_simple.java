@@ -1,6 +1,6 @@
 import javax.swing.text.html.HTML;
 
-public class string1 {
+public class string_simple {
 
     // Given a string name, e.g. "Bob", return a greeting of the form "Hello Bob!".
     public static String helloName(String name) {
