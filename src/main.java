@@ -7,8 +7,15 @@ public class main {
         // string_medium.doubleChar("abc"); 
         // string_medium.countHi("a"); 
         // string_medium.catDog("ddd"); 
+        // string_medium.countCode("codecodecode"); 
+        
+        //boolean isEnd = string_medium.endOther ("AbC" , "HiaBc"); 
+        //System.out.println(isEnd);
 
-        string_medium.countCode("codecodecode"); 
+        string_medium.getSandwich ("xxbreadbreadjambreadyy"); 
+
+
+
 
     }
 }
