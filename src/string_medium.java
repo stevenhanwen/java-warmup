@@ -106,4 +106,28 @@ public class string_medium {
     
     }
 
+    // Return the number of times that the string "code" appears anywhere in the given string, 
+    // except we'll accept any letter for the 'd', so "cope" and "cooe" count.
+
+    public static int countCode(String str) {
+
+        int count = 0; 
+
+        if (str.length() < 4) {
+            return count; 
+       }
+        for (int i = 0; i < str.length(); i++) {
+            if (i == str.length() - 3) {
+                break; 
+            }
+            if (str.charAt(i) == 'c' && str.charAt(i + 1) == 'o'
+            && str.charAt(i + 3) == 'e') {
+                count++; 
+            }
+        }
+        System.out.println("final count = " + count);
+        return count; 
+
+    }
+
 }

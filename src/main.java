@@ -6,7 +6,9 @@ public class main {
         // string1.makeOutWord("<<>>", "word"); 
         // string_medium.doubleChar("abc"); 
         // string_medium.countHi("a"); 
+        // string_medium.catDog("ddd"); 
 
-        string_medium.catDog("ddd"); 
+        string_medium.countCode("codecodecode"); 
+
     }
 }
