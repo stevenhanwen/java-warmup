@@ -130,4 +130,95 @@ public class string_medium {
 
     }
 
+    // Given two strings, return true if either of the strings appears at the very end of the other string,
+    // ignoring upper/lower case differences (in other words, the computation should not be "case sensitive"). 
+    // Note: str.toLowerCase() returns the lowercase version of a string.
+
+    public static boolean endOther(String a, String b) {
+        a = a.toLowerCase(); 
+        b = b.toLowerCase(); 
+        int bLength = b.length(); 
+        int aLength = a.length(); 
+
+        // Sets String a as the longer String 
+        if (aLength < bLength) {
+            String temp = a; 
+            a = b; 
+            b = temp; 
+        }
+
+        // resets string length in case string switched 
+        bLength = b.length(); 
+        aLength = a.length(); 
+
+        System.out.println("after switching, a is: " + a + ", and b is: " + b );
+        
+
+        if (a.substring(aLength - bLength).equals(b)) {
+            return true; 
+        }
+    
+        return false; 
+    }
+
+    // A sandwich is two pieces of bread with something in between. Return the string that is between 
+    // the first and last appearance of "bread" in the given string, 
+    // or return the empty string "" if there are not two pieces of bread.
+
+    
+
+    public static String getSandwich(String str) {
+        int countOfBread = 0; 
+        int endOfFirstBread = 0; 
+        int beginningOfLastBread = 0;
+
+        if (str.length() < 10) {
+            System.out.println("");
+            return ""; 
+       }
+
+        //search for the first bread from beginning of string
+        for (int i = 0; i < str.length(); i++) {
+
+            // if i reaches the end of the string, there cannot be "bread" 
+            if (i == str.length() - 4) {
+                break; 
+            }
+
+            //find the first bread, break
+            if (str.substring(i, i + 5).equals("bread")) {
+                countOfBread++; 
+                endOfFirstBread = i + 4; 
+                break; 
+            }
+        }
+
+        // search for the first first bread from the end of the string
+        // NOTE: i must be after the first bread
+        for (int i = str.length() - 1; i > endOfFirstBread; i--) {
+
+            // if i reaches end of first bread, there cannot be another "bread" . 
+            if (i == endOfFirstBread + 4) {
+                break; 
+            }
+            // find the first bread, break
+            if (str.substring(i - 4, i + 1).equals("bread")) {
+                countOfBread++; 
+                beginningOfLastBread = i - 4; 
+                break; 
+            }
+        }
+
+        // there is a sandwich because there are two breads
+        if (countOfBread == 2) {
+
+            System.out.println(str.substring(endOfFirstBread + 1, beginningOfLastBread)); 
+            return str.substring(endOfFirstBread + 1, beginningOfLastBread); 
+        }
+
+        System.out.println("");
+        return ""; 
+    }
+
+
 }
